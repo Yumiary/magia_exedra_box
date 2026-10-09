@@ -14,7 +14,107 @@ Images and catalog metadata: Puella Magi Wiki; per-record source URLs are
 retained in the embedded catalog. No third-party JavaScript or network calls.
 Catalog additions and evidence are recorded in catalog-updates/. Existing card metadata and artwork are retained. Character order follows the source catalog, not a claimed official game order.
 -->
+<!--
+BOX Digits: outlines extracted from Noto Sans Bold 2.015, renamed to BOX Digits.
+Only digits 0-5 are embedded. Original outlines are scaled to the existing
+19.2px badge size and baseline; screen SVG and Canvas share these paths.
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+-->
 <style>
+.level .digit{width:19.2px;height:19.2px;overflow:visible;pointer-events:none}
+
 :root{color-scheme:dark;--box-width:1261px;--box-height:866px;--fg:#ddd;--ink:#080808}
 *{box-sizing:border-box}html,body{margin:0;background:#000;color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}body{position:relative;width:1325px;min-height:calc(var(--box-height) + 70px);margin:0 auto}button{font:inherit;-webkit-tap-highlight-color:transparent}[hidden]{display:none!important}button:focus-visible{outline:2px solid #fff;outline-offset:2px}#box{position:relative;margin:2px 0 0 2px;width:var(--box-width);isolation:isolate}.cell{position:absolute;display:block;border:0;padding:0;background:var(--frame);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);cursor:pointer;touch-action:manipulation;user-select:none;-webkit-touch-callout:none;transition:filter .10s,background .10s}.cell .portrait{position:absolute;inset:2px;clip-path:inherit;overflow:hidden;background:#111}.cell img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;filter:brightness(.37) saturate(.48);transition:filter .1s}.cell[data-level="-1"]{background:#171719}.cell[data-level="-1"] .portrait{inset:1px}.cell.owned img{filter:none}.cell:focus-visible{outline:none;filter:brightness(1.25)}.cell:focus-visible::after{content:"";position:absolute;inset:0;background:#fff5;pointer-events:none}.cell:active{filter:brightness(1.2)}.level{position:absolute;right:8%;bottom:17%;height:23%;min-height:17px;aspect-ratio:1;display:grid;place-items:center;border-radius:50%;background:#060607dc;color:#fff;font-size:19.2px;font-weight:750;font-variant-numeric:tabular-nums;box-shadow:0 0 0 1px #ffffffad;line-height:1;pointer-events:none}.cell[data-level="-1"] .level{display:none}.cell.full .level{background:#f0d89f;color:#16120c;box-shadow:0 0 0 1px #fff9}.rail{position:absolute;left:1281px;top:2px;width:40px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px}.tool{display:grid;place-items:center;flex:none;width:40px;height:40px;margin:0;padding:8px;border:0;border-radius:6px;background:#d9d9dd;color:#090909;cursor:pointer;touch-action:manipulation}.tool svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.tool:disabled{opacity:.4;cursor:default}.tool:hover:not(:disabled){background:#fff}.tool[aria-pressed="true"]{background:#bdcfdf}.tool.busy{animation:pulse .65s infinite alternate}.tool.error{background:#b84343;color:#fff}.tool.success{background:#b1d5b9}#toggleRail{width:32px;height:32px;padding:6px;background:#222226;color:#ddd}#toggleRail svg{width:20px;height:20px}.collapsed .tool:not(#toggleRail){display:none}.rail .meter{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:0;background:transparent;color:#aaa;cursor:default;font-variant-numeric:tabular-nums}.meter span:first-child{font-size:12px;font-weight:700}.meter span:last-child{font-size:11px}.storage-warning .meter{background:#dbaf6b}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@keyframes pulse{to{background:#7797ad}}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}@media print{.rail{display:none}html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 .target,.wish{top:17%;bottom:auto}.target{color:#d8adff;background:#140b20ed;box-shadow:0 0 0 1px #bb80f2}.cell:not(.planned) .target,.cell:not(.wanted) .wish{display:none}.cell.wanted .wish{display:grid}.cell.wanted{background:#e7c477}.cell.wanted .portrait{inset:2px}.wish{color:#f3d58c;background:transparent;box-shadow:none;font-size:25px;text-shadow:0 1px 3px #000,0 0 4px #000}.tool#plan[aria-pressed="true"]{background:#d1a5f6;color:#2a123e}.planning .cell{cursor:crosshair}.plan-overlay{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:18px;background:#0009;backdrop-filter:blur(3px)}.plan-dialog{width:336px;border:1px solid #796086;border-radius:20px;padding:20px;background:#141019;color:#eee;box-shadow:0 12px 70px #000b}.plan-head{display:flex;gap:12px;align-items:center;margin-bottom:15px}.plan-head h2{flex:1;margin:0;font-size:15px;font-weight:650;line-height:1.45}.plan-close{flex:none;width:36px;height:36px;padding:0;border:0;background:transparent;color:#bab0c3;font-size:27px;cursor:pointer}.plan-caption{margin:0 0 14px;color:#bfb2cd;font-size:13px}.plan-options{display:flex;gap:8px}.plan-choice{min-width:44px;min-height:44px;flex:1;padding:9px;border:1px solid #654779;border-radius:12px;background:#21132d;color:#ddafff;font-size:19px;font-weight:700;cursor:pointer}.plan-choice[aria-pressed="true"]{background:#724299;color:#fff;border-color:#d6a4ff}.plan-choice:disabled{opacity:.22;cursor:default}.plan-wish{width:100%;border-color:#887345;color:#f3d58c;background:#2c2415;font-size:17px}.plan-wish[aria-pressed="true"]{background:#725c2d;border-color:#f3d58c}.plan-clear{display:block;margin:17px auto 0;padding:7px 14px;border:0;background:transparent;color:#bca8c8;font-size:13px;cursor:pointer}.plan-clear:disabled{opacity:.3;cursor:default}@media print{.plan-overlay{display:none}}
@@ -25,6 +125,14 @@ body.shared{min-height:calc(var(--box-height) + 108px)}#shareActions,#sharedSave
 </style>
 </head>
 <body class="">
+<svg id="badgeGlyphs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;overflow:hidden"><defs>
+<path id="badge-digit-0" d="M4.7808 0.6456Q4.7808 2.8536 4.3104 4.428Q3.84 6.0024 2.7936 6.8472Q1.7472 7.692 -0.0192 7.692Q-2.496 7.692 -3.648 5.82Q-4.8 3.948 -4.8 0.6456Q-4.8 -1.5816 -4.3392 -3.156Q-3.8784 -4.7304 -2.8224 -5.5752Q-1.7664 -6.42 -0.0192 -6.42Q2.4384 -6.42 3.6096 -4.5576Q4.7808 -2.6952 4.7808 0.6456ZM-1.92 0.6456Q-1.92 2.988 -1.5168 4.1688Q-1.1136 5.3496 -0.0192 5.3496Q1.056 5.3496 1.4784 4.1784Q1.9008 3.0072 1.9008 0.6456Q1.9008 -1.6968 1.4784 -2.8872Q1.056 -4.0776 -0.0192 -4.0776Q-1.1136 -4.0776 -1.5168 -2.8872Q-1.92 -1.6968 -1.92 0.6456Z"></path>
+<path id="badge-digit-1" d="M2.4384 7.5H-0.4608V-0.4296Q-0.4608 -0.9288 -0.432 -1.7352Q-0.4032 -2.5416 -0.384 -3.156Q-0.48 -3.0408 -0.7968 -2.7432Q-1.1136 -2.4456 -1.3824 -2.2152L-2.9568 -0.948L-4.3584 -2.6952L0.0576 -6.2088H2.4384Z"></path>
+<path id="badge-digit-2" d="M4.8576 7.5H-4.7232V5.484L-1.2864 2.0088Q-0.2496 0.9336 0.384 0.2136Q1.0176 -0.5064 1.3056 -1.092Q1.5936 -1.6776 1.5936 -2.3496Q1.5936 -3.1752 1.1424 -3.5784Q0.6912 -3.9816 -0.0768 -3.9816Q-0.864 -3.9816 -1.6128 -3.6168Q-2.3616 -3.252 -3.1872 -2.58L-4.7616 -4.4424Q-4.1664 -4.9608 -3.504 -5.4024Q-2.8416 -5.844 -1.968 -6.1224Q-1.0944 -6.4008 0.1344 -6.4008Q1.4784 -6.4008 2.448 -5.9112Q3.4176 -5.4216 3.9456 -4.5864Q4.4736 -3.7512 4.4736 -2.6952Q4.4736 -1.5624 4.0224 -0.6216Q3.5712 0.3192 2.7168 1.2408Q1.8624 2.1624 0.6528 3.276L-1.1136 4.9272V5.0616H4.8576Z"></path>
+<path id="badge-digit-3" d="M4.32 -3.1368Q4.32 -1.716 3.4656 -0.8712Q2.6112 -0.0264 1.3632 0.2808V0.3384Q3.0144 0.5304 3.8688 1.3368Q4.7232 2.1432 4.7232 3.5064Q4.7232 4.6968 4.1376 5.6472Q3.552 6.5976 2.3328 7.1448Q1.1136 7.692 -0.8064 7.692Q-3.0336 7.692 -4.7616 6.9432V4.4856Q-3.8784 4.9272 -2.9088 5.1576Q-1.9392 5.388 -1.1136 5.388Q0.4416 5.388 1.0656 4.8504Q1.6896 4.3128 1.6896 3.3336Q1.6896 2.7576 1.4016 2.364Q1.1136 1.9704 0.3936 1.7688Q-0.3264 1.5672 -1.6128 1.5672H-2.6496V-0.66H-1.5936Q-0.3264 -0.66 0.336 -0.9Q0.9984 -1.14 1.2384 -1.5528Q1.4784 -1.9656 1.4784 -2.5032Q1.4784 -3.2328 1.0272 -3.6456Q0.576 -4.0584 -0.48 -4.0584Q-1.4592 -4.0584 -2.1792 -3.7224Q-2.8992 -3.3864 -3.3984 -3.06L-4.7424 -5.0568Q-3.936 -5.6328 -2.8512 -6.0168Q-1.7664 -6.4008 -0.2688 -6.4008Q1.8432 -6.4008 3.0816 -5.5464Q4.32 -4.692 4.32 -3.1368Z"></path>
+<path id="badge-digit-4" d="M5.1648 4.6584H3.5136V7.5H0.6912V4.6584H-5.1648V2.6424L0.8448 -6.2088H3.5136V2.412H5.1648ZM0.6912 0.0888Q0.6912 -0.3528 0.7104 -0.9864Q0.7296 -1.62 0.7584 -2.1672Q0.7872 -2.7144 0.8064 -2.8872H0.7296Q0.5568 -2.5032 0.3648 -2.1384Q0.1728 -1.7736 -0.096 -1.3896L-2.6112 2.412H0.6912Z"></path>
+<path id="badge-digit-5" d="M0.2688 -1.2552Q1.5168 -1.2552 2.496 -0.7752Q3.4752 -0.2952 4.0416 0.6264Q4.608 1.548 4.608 2.9112Q4.608 5.1384 3.2256 6.4152Q1.8432 7.692 -0.864 7.692Q-1.9392 7.692 -2.8896 7.5Q-3.84 7.308 -4.5504 6.9432V4.4472Q-3.84 4.812 -2.8416 5.0712Q-1.8432 5.3304 -0.96 5.3304Q0.3264 5.3304 1.008 4.8024Q1.6896 4.2744 1.6896 3.1608Q1.6896 1.0872 -1.056 1.0872Q-1.5936 1.0872 -2.1696 1.1928Q-2.7456 1.2984 -3.1296 1.3944L-4.2816 0.78L-3.7632 -6.2088H3.6672V-3.7512H-1.2288L-1.4784 -1.0632Q-1.152 -1.1208 -0.7776 -1.188Q-0.4032 -1.2552 0.2688 -1.2552Z"></path>
+</defs></svg>
 <main id="box" aria-label="Magia Exedra 五星 BOX" data-i18n-aria="boxLabel"></main>
 <nav id="toolbar" class="rail" aria-label="BOX 控件" data-i18n-aria="controls">
 <button class="tool" id="toggleRail" title="收起控件" aria-label="收起控件" aria-expanded="true" data-i18n-aria="collapse" data-i18n-title="collapse"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"></path></svg></button>
@@ -103,11 +211,16 @@ function level(id){return state.levels[id]??-1;}
 function compareRelease(a,b){return (a.releaseDate||'9999-99-99').localeCompare(b.releaseDate||'9999-99-99')||a.releaseOrder-b.releaseOrder||a.sourceIndex-b.sourceIndex||a.id.localeCompare(b.id);}
 function sorted(){return [...CATALOG].sort(state.sort==='release'?compareRelease:(a,b)=>a.characterOrder-b.characterOrder||(a.releaseDate||'9999-99-99').localeCompare(b.releaseDate||'9999-99-99')||a.sourceIndex-b.sourceIndex||a.id.localeCompare(b.id));}
 function availabilityText(c){const note=c.availability?.availabilityNote;return t('availability_'+(c.availability?.status||'unverified'))+(note?' · '+(note==='2026-08-31已加入常驻マギアガチャ'?t('permanentSince',['2026-08-31']):note):'');}
+function setBadgeDigit(badge,value){
+ badge.querySelector('.sr-only').textContent=value===null?'':value;
+ const glyph=badge.querySelector('use');
+ if(value===null)glyph.removeAttribute('href');else glyph.setAttribute('href','#badge-digit-'+value);
+}
 function updateCell(c){
  const n=level(c.id),p=state.plans[c.id],el=nodes.get(c.id);
  el.dataset.level=n;el.classList.toggle('owned',n>=0);el.classList.toggle('full',n===c.maxBreak);
  el.classList.toggle('wanted',!!p?.wantPull);el.classList.toggle('planned',Number.isInteger(p?.target));
- el.querySelector('.level').textContent=n<0?'':n;el.querySelector('.target').textContent=p?.target??'';
+ setBadgeDigit(el.querySelector('.level'),n<0?null:n);setBadgeDigit(el.querySelector('.target'),p?.target??null);
  const availability=availabilityText(c);
  const name=cardName(c)+' · '+c.rarity+'★'+(c.releaseDate?' · '+c.releaseDate:'');
  const status=(n<0?t('unowned'):t('level',[n]))+(p?.wantPull?' · '+t('want'):p?.target?' · '+t('target',[p.target]):'');
@@ -163,7 +276,8 @@ for(const c of CATALOG){
  const el=document.createElement('button');el.className='cell';el.type='button';el.dataset.id=c.id;el.style.setProperty('--frame','#cbb788');
  const p=document.createElement('span');p.className='portrait';const img=new Image();img.src=c.image;img.alt='';img.draggable=false;p.appendChild(img);
  const badge=document.createElement('span');badge.className='level';badge.setAttribute('aria-hidden','true');
- const target=document.createElement('span');target.className='level target';target.setAttribute('aria-hidden','true');
+ badge.innerHTML='<span class="sr-only"></span><svg class="digit" viewBox="-9.6 -9.6 19.2 19.2" aria-hidden="true" focusable="false" fill="currentColor"><use></use></svg>';
+ const target=badge.cloneNode(true);target.className='level target';
  const wish=document.createElement('span');wish.className='level wish';wish.textContent='★';wish.setAttribute('aria-hidden','true');
  el.append(p,badge,target,wish);
  let holdTimer=null,held=false,startX=0,startY=0,pointerType='mouse';
@@ -187,15 +301,8 @@ window.addEventListener('keydown',e=>{if(/^(TEXTAREA|INPUT)$/.test(document.acti
 function flash(button,type){button.classList.add(type);setTimeout(()=>button.classList.remove(type),1300);}
 function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);}
 function hex(ctx,x,y,w,h){ctx.beginPath();ctx.moveTo(x+w/2,y);ctx.lineTo(x+w,y+h/4);ctx.lineTo(x+w,y+3*h/4);ctx.lineTo(x+w/2,y+h);ctx.lineTo(x,y+3*h/4);ctx.lineTo(x,y+h/4);ctx.closePath();}
-// 数字使用固定矢量笔画，避免系统字体、页面缩放和设备倍率影响 PNG。
-const BADGE_DIGITS=[
- 'M0-6C-5-6-5 6 0 6C5 6 5-6 0-6Z',
- 'M-3-3L0-6V6M-3 6H3',
- 'M-4-3C-4-7 4-7 4-3C4 0-4 3-4 6H4',
- 'M-4-5C-1-8 4-6 4-3C4-1 2 0 0 0C2 0 4 1 4 3C4 7-1 8-4 5',
- 'M2 6V-6L-4 2H5',
- 'M4-6H-3L-4 0C1-2 5 0 4 4C3 7-1 8-4 5'
-].map(path=>new Path2D(path));
+// 与页面 SVG 的 use 共用同一组 Noto Sans Bold 轮廓，避免字体栅格化随 DPR 改变导出。
+const BADGE_DIGITS=Array.from({length:6},(_,digit)=>new Path2D($('badge-digit-'+digit).getAttribute('d')));
 function drawBadge(ctx,value,x,y,w,h,kind,max){
  const r=Math.max(8.5,h*.115),bx=x+2+w*.92-r,by=kind==='current'?y+2+h*.83-r:y+2+h*.17+r;
  ctx.save();
@@ -205,7 +312,7 @@ function drawBadge(ctx,value,x,y,w,h,kind,max){
  }else{
   ctx.beginPath();ctx.arc(bx,by,r,0,Math.PI*2);ctx.fillStyle=kind==='target'?'#140b20ed':value===max?'#f0d89f':'#060607e8';ctx.fill();
   ctx.strokeStyle=kind==='target'?'#bb80f2':'#ffffffad';ctx.lineWidth=1;ctx.stroke();ctx.fillStyle=kind==='target'?'#d8adff':value===max?'#16120c':'#fff';
-  ctx.translate(bx,by);ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=2.2;ctx.lineCap='round';ctx.lineJoin='round';ctx.stroke(BADGE_DIGITS[value]);
+  ctx.translate(bx,by);ctx.fill(BADGE_DIGITS[value]);
  }ctx.restore();
 }
 $('png').onclick=async()=>{
